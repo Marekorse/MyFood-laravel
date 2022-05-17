@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
             ->create();
 
             $categories=[
-                'Maso & Ryby',
+                'Maso a Ryby',
                 'Polievky',
                 'Cestoviny',
                 'Dezerty',
