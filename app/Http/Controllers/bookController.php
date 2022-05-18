@@ -89,10 +89,8 @@ class bookController extends Controller
      */
     public function showBook(Request $request, $id=null)
     {
-
         $user=auth()->user();
         
-
         if (isset($id)) {
             $book= Book::where('id', $id)
                 ->orWhere('name', $id)
@@ -185,9 +183,11 @@ class bookController extends Controller
      */
     public function storeRecipe(Request $request)
     {
+        $user=auth()->user();
         $book=Book::find($request->book_id);
-
-        $this->authorize('hasAccess', $book);
+        if ($book->user_id != $user->id ) {
+            $this->authorize('hasAccess', $book);
+        }
 
         $already_in_book=$book->bookRecipes()->where('id', $request->recipe_id)->first();
         $is_public=Recipe::whereHas('privacy', function (Builder $query) {
