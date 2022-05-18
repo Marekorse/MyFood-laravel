@@ -42,7 +42,7 @@
             </button-component>
             <button-component
                 :disabled="!bookAccess || !authId"
-                :link="$app_url + 'receptar/' + user.name">
+                :link="$app_url + 'receptar/' + user.book.name">
                 <div class="flex items-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
