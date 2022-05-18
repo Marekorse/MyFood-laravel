@@ -25,7 +25,7 @@
 </head>
 <body class="bg-gray-100">
     <div v-cloak id="app">
-        <pass-overlay></pass-overlay>
+        
         <main class=" mx-auto min-h-screen bg-gradient-to-br from-transparent via-pink-100 to-blue-200 ">
             @yield('content')
         </main>

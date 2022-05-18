@@ -65,13 +65,12 @@ class DatabaseSeeder extends Seeder
                 $new_category->lang = 'sk';
                 $new_category->save();
             };
-   
             $recipes=Recipe::all();
-
-            $recipes_ids=$recipes
-                ->pluck('id')
-                ->toArray();
-            
+            $recipes_ids=[];
+            foreach ($recipes as  $recipe) {
+                $recipes_ids[]=$recipe->id;
+            };
+   
             $images = Storage::disk('public')
                 ->allFiles('images/faker/full/');
 
@@ -99,10 +98,6 @@ class DatabaseSeeder extends Seeder
                     ->attach($id);
                 
             });
-
-            $recipes_ids=recipe::all()
-                ->pluck('id')
-                ->toArray();
 
             User::all()->each(function ($user) use($recipes_ids){
                 $array_of_random_ids=array_rand($recipes_ids, rand(1,count($recipes_ids)));
