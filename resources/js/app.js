@@ -69,7 +69,6 @@ import recipe from './components/recipe/recipe.vue'
 import conversations from './components/conversations/conversations.vue'
 import userSettings from './components/user/userSettings.vue'
 import adminPanel from './components/admin-panel/adminPanel.vue'
-import passOverlay from './components/PASSOVERLAY.vue'
 import NavigationPanel from './components/navigation/navigationPanel.vue'
 import appLogo from './components/navigation/logo.vue'
 import verifyEmail from './components/auth/verifyEmail.vue'
@@ -100,7 +99,6 @@ const app = new Vue({
       recipesContainer,
       conversations,
       userSettings,
-      passOverlay,
       adminPanel,
       recipeForm,
       recipe,
