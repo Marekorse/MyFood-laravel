@@ -447,6 +447,10 @@ CREATE TABLE IF NOT EXISTS `roles` (
 -- Exportování dat pro tabulku laravel.roles: ~0 rows (přibližně)
 DELETE FROM `roles`;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
+
+INSERT INTO `roles` (`id`, `role`) VALUES
+	(1, 'administrator'),
+	(2, 'user');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 
 -- Exportování struktury pro tabulka laravel.tasks
