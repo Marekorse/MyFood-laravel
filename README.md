@@ -10,7 +10,7 @@ Myfood je online receptár, ktorý použivateľom ponúka všetky moderné funkc
 3. Nastavíme websocket (ja som použil pusher)
 
 
-### Aplikácia beži na php 8.1 a  vžaduje package manager  [composer](https://getcomposer.org/) a [NPM](https://www.npmjs.com/).
+### Aplikácia beži na php 8.1 a  vyžaduje package manager  [composer](https://getcomposer.org/) a [NPM](https://www.npmjs.com/).
 
 ```bash
 composer install 
